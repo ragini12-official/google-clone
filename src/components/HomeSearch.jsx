@@ -5,6 +5,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFillMicFill } from 'react-icons/bs';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function HomeSearch() {
 
@@ -39,13 +40,19 @@ export default function HomeSearch() {
       hover:shadow-md focus:shadow-md transition-shadow 
       sm:max-w-xl lg:max-w-2xl'>
         <AiOutlineSearch
-          className='text-xl text-gray-700 mr-3' />
+          className='text-xl text-gray-700 mr-3 mt-1' />
         <input
           type='text'
           placeholder='Search Google or type a URL'
           className='flex-grow focus:outline-none '
           onChange={e => setInput(e.target.value)} />
-        <BsFillMicFill className='text-lg ' />
+        {/* <BsFillMicFill className='text-lg ' /> */}
+        <Image 
+        src="google_mic_icon.svg"
+        alt="Microphone"
+        width={30}
+        height={30}
+        />
       </form>
 
       <div className='flex flex-col space-y-2 sm:space-y-0 justify-center sm:flex-row mt-6 sm:space-x-4'>
