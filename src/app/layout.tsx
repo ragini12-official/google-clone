@@ -4,6 +4,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import Footer from '@/components/Footer';
+
 export const metadata: Metadata = {
   title: "Google Clone",
   description: "This is a Google Search clone.",
@@ -16,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
