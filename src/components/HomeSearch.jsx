@@ -34,7 +34,7 @@ export default function HomeSearch() {
   return (
     <>
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className='flex w-full mt-5 mx-auto max-w-{90%} 
       border border-gray-200 px-5 py-3 rounded-full 
       hover:shadow-md focus:shadow-md transition-shadow 
