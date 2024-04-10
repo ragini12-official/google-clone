@@ -4,8 +4,9 @@ import WebSearchResults from '@/components/WebSearchResults';
 
 export default async function WebSearchPage({ searchParams }) {
 
+    const start = searchParams.start || '1';
     const query = searchParams['searchTerm'];
-    const API_URL = `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${query}`;
+    const API_URL = `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${query}&start=${start}`;
 
     const response = await fetch(API_URL);
     if(!response || !response.ok) {
