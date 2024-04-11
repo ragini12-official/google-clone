@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 
 import WebSearchResults from '@/components/WebSearchResults';
 
@@ -25,8 +25,10 @@ export default async function WebSearchPage({ searchParams }) {
     }
 
     return (
+        <Suspense>
         <div className=''>
             <WebSearchResults results={data}/>
         </div>
+        </Suspense>
     )
 }

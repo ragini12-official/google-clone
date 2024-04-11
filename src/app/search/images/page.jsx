@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 
 import ImageSearchResults from '@/components/ImageSearchResults';
 
@@ -26,8 +26,10 @@ export default async function ImageSearchPage({ searchParams }) {
     }
 
     return (
+        <Suspense>
         <div className=''>
             <ImageSearchResults results={data}/>
         </div>
+        </Suspense>
     )
 }
