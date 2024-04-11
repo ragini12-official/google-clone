@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react';
+import React, {Suspense} from 'react';
 
 import {usePathname, useSearchParams} from 'next/navigation';
 import Link from 'next/link';
@@ -14,6 +14,7 @@ export default function PaginationButtons() {
     const start = +searchParams.get('start') || 1;
 
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className='text-blue-700 flex px-10 mt-10 pb-2 justify-between sm:justify-start sm:space-x-44 sm:px-0'>
         {
             start >= 10 && (
@@ -36,5 +37,6 @@ export default function PaginationButtons() {
             )
         }
     </div>
+    </Suspense>
   )
 }
