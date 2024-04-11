@@ -10,7 +10,7 @@ export default function CountryLookup() {
             // const response = await fetch(``)
             
             //FETCHING REPSONSE FROM THE IPINFO API
-            const ipinfo_response = await fetch("https://ipinfo.io/json?token=08f63e1ca73e74")
+            const ipinfo_response = await fetch(`https://ipinfo.io/json?token=08f63e1ca73e74`)
             .then(res => res.json())
             .then(data => data['country']);
 
